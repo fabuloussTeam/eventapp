@@ -2,6 +2,7 @@ import { ThemeProvider } from '@/components/theme/ThemeContext'
 import Header from '@/components/header/Header'
 import '@/styles/globals.css'
 import styles from '@/styles/Layout.module.css'
+import AddEventButton from '@/components/AddEventButton'
 
 export const metadata = {
   title: 'EventSite - Vos événements préférés',
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
               {children}
             </div>
           </main>
+		  <AddEventButton />
           <footer style={{ 
             textAlign: 'center', 
             padding: '2rem', 
