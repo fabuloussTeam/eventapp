@@ -1,0 +1,30 @@
+/* src/components/theme/ThemeToggle.module.css */
+.toggle {
+    position: relative;
+    width: 50px;
+    height: 26px;
+    border: none;
+    background: var(--secondary-color);
+    border-radius: 13px;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 1rem;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    font-size: 12px;
+  }
+  
+  [data-theme="dark"] .slider {
+    transform: translateX(24px);
+  }
