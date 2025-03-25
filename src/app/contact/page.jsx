@@ -1,6 +1,28 @@
+"use client";
+
+import { useState } from 'react';
 import styles from '@/styles/Layout.module.css'
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form Data:', formData);
+  };
+
   return (
     <>
       <h1 className={styles.title}>Contactez-nous</h1>
@@ -12,12 +34,14 @@ export default function ContactPage() {
         borderRadius: '8px',
         boxShadow: '0 4px 6px var(--card-shadow)'
       }}>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div style={{ marginBottom: '1rem' }}>
             <label htmlFor="name" style={{ display: 'block', marginBottom: '0.5rem' }}>Nom</label>
             <input 
               type="text" 
               id="name" 
+              value={formData.name}
+              onChange={handleChange}
               style={{ 
                 width: '100%', 
                 padding: '0.5rem', 
@@ -33,6 +57,8 @@ export default function ContactPage() {
             <input 
               type="email" 
               id="email" 
+              value={formData.email}
+              onChange={handleChange}
               style={{ 
                 width: '100%', 
                 padding: '0.5rem', 
@@ -48,6 +74,8 @@ export default function ContactPage() {
             <textarea 
               id="message" 
               rows="5" 
+              value={formData.message}
+              onChange={handleChange}
               style={{ 
                 width: '100%', 
                 padding: '0.5rem', 
