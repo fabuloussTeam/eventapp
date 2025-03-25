@@ -143,3 +143,28 @@
   @keyframes spin {
     to { transform: rotate(360deg); }
   }
+
+  /* Ajoutez ces styles supplémentaires */
+.editButton {
+  background: #1976d2;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.editButton:hover {
+  background: #1565c0;
+}
+
+.imagePreview {
+  margin-top: 1rem;
+}
+
+.imagePreview img {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}

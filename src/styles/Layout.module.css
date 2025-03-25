@@ -86,3 +86,10 @@
     padding: 2rem;
     border-radius: 8px;
   }
+
+  .profName {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: red;
+    font-style: italic;
+  }

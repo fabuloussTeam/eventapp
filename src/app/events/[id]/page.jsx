@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react' // Ajout de l'import manquant
 import { useRouter, useParams } from 'next/navigation'
+import Link from 'next/link' // Import manquant ajouté ici
 import styles from '@/styles/EventDetail.module.css'
 
 export default function EventDetail() {
@@ -67,11 +68,16 @@ export default function EventDetail() {
         >
           {deleting ? 'Suppression...' : 'Supprimer'}
         </button>
+        <Link 
+          href={`/events/${event.id}/edit`}
+          className={styles.editButton}
+        >
+          Modifier
+        </Link>
       </div>
       
       <h1>{event.title}</h1>
       <img src={event.imageUrl} alt={event.title} className={styles.image} />
-      
       <div className={styles.details}>
         <p><strong>Date:</strong> {new Date(event.date).toLocaleString('fr-FR')}</p>
         <p><strong>Lieu:</strong> {event.location}</p>

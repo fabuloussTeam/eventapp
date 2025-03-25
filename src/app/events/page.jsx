@@ -5,14 +5,11 @@ import styles from '@/styles/Layout.module.css'
 
 export default function EventsPage() {
   const [events, setEvents] = useState([])
-
   useEffect(() => {
     fetch('/api/events')
       .then(res => res.json())
       .then(data => setEvents(data))
   }, [])
-
-  
 
   return (
     <div className={styles.container}>
@@ -29,7 +26,6 @@ export default function EventsPage() {
               <h3>{event.title}</h3>
               <p>{new Date(event.date).toLocaleDateString()}</p>
               <p>{event.location}</p>
-
               <Link href={`/events/${event.id}`} className={styles.button}>
                 Voir détails
               </Link>

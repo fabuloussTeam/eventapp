@@ -1,16 +1,14 @@
 [
     {
       "id": 1,
-      "name": "Jean Dupont",
-      "role": "Guitariste",
-      "bio": "Jean joue de la guitare depuis 15 ans et a participé à de nombreux festivals.",
-      "image": "/images/member1.jpg"
+      "image": "/images/lacite1.jpg"
     },
     {
       "id": 2,
-      "name": "Marie Martin",
-      "role": "Chanteuse",
-      "bio": "Marie est la voix principale du groupe avec une expérience de 10 ans.",
-      "image": "/images/member2.jpg"
+      "image": "/images/lacite2.jpg"
+    },
+    {
+      "id": 3,
+      "image": "/images/lacite3.jpg"
     }
   ]
